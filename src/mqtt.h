@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 #define MQTT_HEADER_LEN 2
-#define MQTT_ACK_LEN
+#define MQTT_ACK_LEN 4
 
 /**
  * Stub bytes. bits 4-7 in fixed header byte which
