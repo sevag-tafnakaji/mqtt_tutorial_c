@@ -1,7 +1,8 @@
-#include "mqtt.h"
-#include "pack.h"
-#include <stdlib.h>
 #include <string.h>
+#include <arpa/inet.h>
+#include "util.h"
+#include "pack.h"
+#include "mqtt.h"
 
 /**
  * MQTT v3.1.1 standard. Remaining length field for fixed header

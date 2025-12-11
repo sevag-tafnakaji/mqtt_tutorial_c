@@ -1,19 +1,21 @@
 #define _DEFAULT_SOURCE
-
-#include "network.h"
-#include <fcntl.h>
+#include <stdlib.h>
+#include <errno.h>
 #include <netdb.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <arpa/inet.h>
+#include <sys/un.h>
+#include <sys/epoll.h>
+#include <sys/timerfd.h>
 #include <netinet/in.h>
 #include <netinet/tcp.h>
-#include <openssl/err.h>
-#include <stdlib.h>
-#include <string.h>
-#include <sys/socket.h>
-#include <sys/timerfd.h>
 #include <sys/types.h>
-#include <sys/un.h>
-#include <time.h>
-#include <unistd.h>
+#include <sys/socket.h>
+#include <sys/eventfd.h>
+#include "util.h"
+#include "config.h"
+#include "network.h"
 
 /* Set non-blocking socket */
 int set_nonblocking(int fd) {

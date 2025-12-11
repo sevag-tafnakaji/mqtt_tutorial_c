@@ -1,6 +1,6 @@
 #include "pack.h"
+#include "util.h"
 #include <arpa/inet.h>
-#include <stdlib.h>
 #include <string.h>
 
 struct bytestring *bytestring_create(size_t len) {
